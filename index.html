@@ -5,11 +5,19 @@
 	<title>Masha Zabara - Cellist, Performer, Creator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
+		@font-face {
+			font-family: "The Bold Font";
+			src: url("fonts/theboldfont.woff2") format("woff2"),
+					url("fonts/theboldfont.woff") format("woff");
+			font-weight: normal;
+			font-style: normal;
+		}
 		body {
 			margin: 0;
+			font-family: Roboto;
 		}
 		.content {
-
+			padding: 0 90px;
 		}
 		.content--home {
 			height: 100vh;
@@ -17,11 +25,54 @@
 			background-repeat: no-repeat;
 			background-position: center right;
 			background-size: cover;
+			display: flex;
+			align-items: center;
+			padding: 0;
+		}
+		.page-title {
+			font-family: "The Bold Font";
+			color: white;
+			font-size: 64px;
+			text-shadow: 0 0 32px rgba(0, 0, 0, 0.3);
+			transform: translate(190px, 0);
+			transform-origin: top left;
+			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+			top: 0;
+		}
+		.page-title--docked {
+			transform: translate(10px, 0);
+			position: fixed;
+		}
+		.page-title--small {
+			transform: translate(10px, 10px) scale(0.2);
+			cursor: pointer;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+		.page-title--firstname {
+
+		}
+		.page-title--lastname {
+			color: #bb2a63;
+			transform: translate(-161px,58px);
+			display: inline-block;
+			text-shadow: 0 4px 26px rgba(0,0,0,.4);
+			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+		}
+		.page-title--small .page-title--lastname {
+			opacity: 0;
 		}
 	</style>
 </head>
 <body>
-	<div class="content content--home"></div>
+	<div class="content content--home">
+		<div class="page-title">
+			<span class="page-title--firstname">Masha</span>
+			<span class="page-title--lastname">Zabara</span>
+		</div>
+	</div>
 	<div class="content content--bio">
 		<h1>Biography</h1>
 	</div>
@@ -36,6 +87,13 @@
 	</div>
 	<div class="content content--contact">
 		<h1>Contact</h1>
+		<p>a</p>
+		<p>a</p>
+		<p>a</p>
+		<p>a</p>
+		<p>a</p>
+		<p>a</p>
 	</div>
+	<script src="main.js"></script>
 </body>
 </html>
