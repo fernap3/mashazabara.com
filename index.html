@@ -16,6 +16,20 @@
 			margin: 0;
 			font-family: Roboto;
 		}
+		.navbar {
+			background: black;
+			height: 40px;
+			transition: all .5s cubic-bezier(0.215, 0.61, 0.355, 1);
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+		.navbar--hidden {
+			opacity: 0;
+			height: 0;
+			pointer-events: none;
+		}
 		.content {
 			padding: 0 90px;
 		}
@@ -67,6 +81,7 @@
 	</style>
 </head>
 <body>
+	<div class="navbar navbar--hidden"></div>
 	<div class="content content--home">
 		<div class="page-title">
 			<span class="page-title--firstname">Masha</span>
