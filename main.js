@@ -20,5 +20,14 @@ window.onscroll = (evt) => {
 
 const firstName = document.querySelector(".page-title--firstname");
 firstName.onclick = evt => {
-	window.scrollTo(0, 0);
+	const isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
+
+	if (isSmoothScrollSupported)
+		window.scrollTo({
+			"behavior": "smooth",
+			"left": 0,
+			"top": 0
+		});
+	else
+		window.scrollTo(0, 0);
 };
