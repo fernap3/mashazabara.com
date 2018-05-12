@@ -2,7 +2,7 @@ window.onscroll = (evt) => {
 	const title = document.querySelector(".page-title");
 	const navbar = document.querySelector(".navbar");
 
-	if (window.pageYOffset >= window.innerHeight * .4)
+	if (window.pageYOffset >= window.innerHeight * .35)
 		title.classList.add("page-title--docked");
 	else
 		title.classList.remove("page-title--docked");

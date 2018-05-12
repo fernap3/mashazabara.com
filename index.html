@@ -34,7 +34,7 @@
 		}
 		.navbar {
 			background: black;
-			height: 40px;
+			height: 36px;
 			transition: all .5s cubic-bezier(0.215, 0.61, 0.355, 1);
 			position: fixed;
 			top: 0;
@@ -58,6 +58,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			align-items: flex-start;
 			padding: 0;
 		}
 		.page-title {
@@ -101,7 +102,11 @@
 			animation-name: basscleff-in;
 			animation-duration: 1s;
 			animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-			animation-fill-mode: both;
+			animation-fill-mode: backwards;
+			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+		}
+		.page-title--small .page-title--firstname::after {
+			opacity: 0;
 		}
 		.page-title--lastname {
 			color: #bb2a63;
@@ -175,12 +180,36 @@
 	</div>
 	<div class="content content--contact">
 		<h1>Contact</h1>
-		<p>a</p>
-		<p>a</p>
-		<p>a</p>
-		<p>a</p>
-		<p>a</p>
-		<p>a</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
+		<p>blah</p>
 	</div>
 	<script src="main.js"></script>
 </body>
