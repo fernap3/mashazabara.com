@@ -12,6 +12,22 @@
 			font-weight: normal;
 			font-style: normal;
 		}
+		@keyframes firstname-in {
+			from { opacity: 0; transform: translateX(-20px); }
+			to { opacity: 1; transform: none; }
+		}
+		@keyframes lastname-in {
+			from { opacity: 0; transform: translateX(20px); }
+			to { opacity: 1; transform: none; }
+		}
+		@keyframes basscleff-in {
+			from { opacity: 0; transform: translateX(-10px); }
+			to { opacity: 1; transform: none; }
+		}
+		@keyframes descriptionline-in {
+			from { opacity: 0; transform: translateX(-10px); }
+			to { opacity: 1; transform: none; }
+		}
 		body {
 			margin: 0;
 			font-family: Roboto;
@@ -69,6 +85,10 @@
 		}
 		.page-title--firstname {
 			position: relative;
+			display: inline-block;
+			animation-name: firstname-in;
+			animation-duration: 1s;
+			animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 		}
 		.page-title--firstname::after {
 			content: "𝄢";
@@ -78,13 +98,22 @@
 			top: -30px;
 			right: -100px;
 			text-shadow: none;
+			animation-name: basscleff-in;
+			animation-duration: 1s;
+			animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+			animation-fill-mode: both;
 		}
 		.page-title--lastname {
 			color: #bb2a63;
-			transform: translate(50px, -22px);
+			position: relative;
+			left: 50px;
+			top: -22px;
 			display: inline-block;
 			text-shadow: 0 4px 26px rgba(0,0,0,.4);
 			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+			animation-name: lastname-in;
+			animation-duration: 1s;
+			animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 		}
 		.page-title--small .page-title--lastname {
 			opacity: 0;
@@ -107,6 +136,16 @@
 			font-size: 0.8em;
 			font-style: italic;
 		}
+		.description-line {
+			animation-name: descriptionline-in;
+			animation-duration: 1s;
+			animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+			animation-fill-mode: both;
+			margin: 0;
+		}
+		.description-line:nth-child(1) { animation-delay: .4s; }
+		.description-line:nth-child(2) { animation-delay: .5s; }
+		.description-line:nth-child(3) { animation-delay: .6s; }
 	</style>
 </head>
 <body>
@@ -117,9 +156,9 @@
 			<span class="page-title--lastname">Zabara</span>
 		</div>
 		<div class="page-title--description">
-			Cellist<span class="translation">/віяланчэліст</span><br>
-			Performer<span class="translation">/выканаўца</span><br>
-			Creator<span class="translation">/стваральнік</span>
+			<p class="description-line">Cellist<span class="translation">/віяланчэліст</span></p>
+			<p class="description-line">Performer<span class="translation">/выканаўца</span></p>
+			<p class="description-line">Creator<span class="translation">/стваральнік</span></p>
 		</div>
 	</div>
 	<div class="content content--bio">
