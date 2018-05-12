@@ -68,7 +68,16 @@
 			user-select: none;
 		}
 		.page-title--firstname {
-
+			position: relative;
+		}
+		.page-title--firstname::after {
+			content: "𝄢";
+			color: black;
+			font-size: 200%;
+			position: absolute;
+			top: -30px;
+			right: -100px;
+			text-shadow: none;
 		}
 		.page-title--lastname {
 			color: #bb2a63;
