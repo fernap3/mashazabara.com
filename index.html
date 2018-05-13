@@ -31,6 +31,7 @@
 		body {
 			margin: 0;
 			font-family: Roboto;
+			color: #464646;
 		}
 		.navbar {
 			background: black;
@@ -151,6 +152,26 @@
 		.description-line:nth-child(1) { animation-delay: .4s; }
 		.description-line:nth-child(2) { animation-delay: .5s; }
 		.description-line:nth-child(3) { animation-delay: .6s; }
+		.bio {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 50px;
+			font-size: 16px;
+			line-height: 30px;
+		}
+		.bio__p {
+			margin-top: 0;
+		}
+		.bio__p--first {
+			grid-column: 1;
+		}
+		.bio__p--second {
+			grid-column: 2;
+		}
+		.bio__p--endorsement {
+			font-weight: bold;
+			grid-column: 2;
+		}
 	</style>
 </head>
 <body>
@@ -168,6 +189,11 @@
 	</div>
 	<div class="content content--bio">
 		<h1>Biography</h1>
+		<div class="bio">
+			<p class="bio__p bio__p--first">Originally from Belarus, Masha is an award-winning cellist who has played individually, with groups of musicians and multiple orchestras throughout Europe and the United States. A second generation musician; she is currently a principal cellist with the Conservatory at Bard College in Annandale, New York, a short distance from Manhattan and Boston.</p>
+			<p class="bio__p bio__p--second">Her passionate playing, imbued with the romance of Eastern Europe is intensified by the use of a loop pedal to create a thoroughly modern sound. An experienced performer with an extensive repetoire, Masha mesmerizes with a unique interpretation of pop, jazz and classical works.</p>
+			<p class="bio__p bio__p--endorsement">Masha Zabara plays an O.Glásel violoncello, 1917, generously provided by Carlsen Cello Foundation.</p>
+		</div>
 	</div>
 	<div class="content content--npr">
 		NPR sample here
