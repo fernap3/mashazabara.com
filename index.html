@@ -172,6 +172,46 @@
 			font-weight: bold;
 			grid-column: 2;
 		}
+		.content--npr {
+			height: 600px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			color: white;
+			font-size: 46px;
+			font-weight: 200;
+			position: relative;
+		}
+		.content--npr::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url(images/piano-background.jpg);
+			background-repeat: no-repeat;
+			background-position: center right;
+			background-size: cover;
+			z-index: -1;
+			filter: brightness(.3);
+		}
+		.npr-quote {
+			align-self: flex-end;
+			grid-column: 1;
+			margin: 0;
+		}
+		.npr-link {
+			align-self: flex-start;
+			grid-column: 1;
+			font-size: 16px;
+		}
+		.npr-photo {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+			align-self: center;
+			box-shadow: 0 10px 20px rgba(0,0,0,1);
+			border-radius: 8px;
+		}
 	</style>
 </head>
 <body>
@@ -196,7 +236,9 @@
 		</div>
 	</div>
 	<div class="content content--npr">
-		NPR sample here
+		<p class="npr-quote">&ldquo;So playful, so<br>evocative. Projecting performance!&rdquo; &ndash; NPR</p>
+		<p class="npr-link">Show 318, Boston, MA &ndash; Mariya Zabara, cello</p>
+		<img class="npr-photo" src="images/masha-shoulder.jpg" alt="A photo of Masha">
 	</div>
 	<div class="content content--awards">
 		<h1>Awards</h1>
