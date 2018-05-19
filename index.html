@@ -32,6 +32,12 @@
 			margin: 0;
 			font-family: Roboto;
 			color: #464646;
+			display: flex;
+    		flex-direction: column;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
 		}
 		.navbar {
 			background: black;
@@ -42,6 +48,18 @@
 			left: 0;
 			right: 0;
 		}
+		.external-link span {
+			vertical-align: middle;
+		}
+		.external-link::before {
+			content: '';
+			display: inline-block;
+			background-image: url("images/external-link.svg");
+			vertical-align: middle;
+			height: 1em;
+    		width: 1em;
+			margin-right: .4em;
+		}
 		.navbar--hidden {
 			opacity: 0;
 			height: 0;
@@ -49,6 +67,11 @@
 		}
 		.content {
 			padding: 0 90px;
+			color: #676767;
+		}
+		.content__title {
+			font-weight: 200;
+			color: #232323;
 		}
 		.content--home {
 			height: 100vh;
@@ -61,6 +84,9 @@
 			justify-content: center;
 			align-items: flex-start;
 			padding: 0;
+		}
+		.content--bio {
+			padding: 60px 90px;
 		}
 		.page-title {
 			font-family: "The Bold Font";
@@ -228,7 +254,7 @@
 		</div>
 	</div>
 	<div class="content content--bio">
-		<h1>Biography</h1>
+		<h1 class="content__title">Biography</h1>
 		<div class="bio">
 			<p class="bio__p bio__p--first">Originally from Belarus, Masha is an award-winning cellist who has played individually, with groups of musicians and multiple orchestras throughout Europe and the United States. A second generation musician; she is currently a principal cellist with the Conservatory at Bard College in Annandale, New York, a short distance from Manhattan and Boston.</p>
 			<p class="bio__p bio__p--second">Her passionate playing, imbued with the romance of Eastern Europe is intensified by the use of a loop pedal to create a thoroughly modern sound. An experienced performer with an extensive repetoire, Masha mesmerizes with a unique interpretation of pop, jazz and classical works.</p>
@@ -237,17 +263,17 @@
 	</div>
 	<div class="content content--npr">
 		<p class="npr-quote">&ldquo;So playful, so<br>evocative. Projecting performance!&rdquo; &ndash; NPR</p>
-		<p class="npr-link">Show 318, Boston, MA &ndash; Mariya Zabara, cello</p>
+		<p class="npr-link"><a class="external-link" target="_blank" href="https://www.fromthetop.org/musician/mariya-zabara/"><span>Show 318, Boston, MA &ndash; Mariya Zabara, cello</span></a></p>
 		<img class="npr-photo" src="images/masha-shoulder.jpg" alt="A photo of Masha">
 	</div>
 	<div class="content content--awards">
-		<h1>Awards</h1>
+		<h1 class="content__title">Awards</h1>
 	</div>
 	<div class="content content--video">
-		<h1>Video</h1>
+		<h1 class="content__title">Video</h1>
 	</div>
 	<div class="content content--contact">
-		<h1>Contact</h1>
+		<h1 class="content__title">Contact</h1>
 		<p>blah</p>
 		<p>blah</p>
 		<p>blah</p>
