@@ -250,9 +250,22 @@
 			color: #a4a4a4;
 		}
 		.videos {
-
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-content: center;
+			max-width: 900px;
+			margin: auto;
+		}
+		@media screen and (max-width: 880px) {
+			.videos {
+				grid-template-columns: 1fr;
+			}
 		}
 		.video-item {
+			margin-bottom: 20px;
+			justify-self: center;
+		}
+		.video-thumb {
 			width: 330px;
 			height: 220px;
 			background-repeat: no-repeat;
@@ -266,7 +279,7 @@
 			border-radius: 5px;
     		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
 		}
-		.video-item::before {
+		.video-thumb::before {
 			/* "Play" button */
 			content: "";
 			display: block;
@@ -279,12 +292,21 @@
 			height: 70px;
 			background-size: 23%;
 		}
-		.video-item:hover {
+		.video-thumb:hover {
 			background-size: 363px 242px;
 			box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5);
 		}
-		.video-item--popper {
+		.video-thumb--popper {
 			background-image: url(images/video-thumb--popper.jpg);
+		}
+		.video-thumb--cellomagic {
+			background-image: url(images/video-thumb--cellomagic.png);
+		}
+		.video-thumb--immigration1 {
+			background-image: url(images/video-thumb--immigration1.jpg);
+		}
+		.video-thumb--immigration2 {
+			background-image: url(images/video-thumb--immigration2.jpg);
 		}
 	</style>
 </head>
@@ -332,9 +354,18 @@
 	<div class="content content--video">
 		<h1 class="content__title">Video</h1>
 		<div class="videos">
-			<div class="video-item video-item--popper">
-				
-			</div>
+			<a class="video-item" target="_blank" href="https://www.youtube.com/watch?v=gkYGaafs3EQ">
+				<div class="video-thumb video-thumb--popper"></div>
+			</a>
+			<a class="video-item" target="_blank" href="https://vimeo.com/267441156">
+				<div class="video-thumb video-thumb--cellomagic"></div>
+			</a>
+			<a class="video-item" target="_blank" href="https://www.youtube.com/watch?v=XvUCAa8txXI">
+				<div class="video-thumb video-thumb--immigration1"></div>
+			</a>
+			<a class="video-item" target="_blank" href="https://www.youtube.com/watch?v=0Wn7WSUloGo">
+				<div class="video-thumb video-thumb--immigration2"></div>
+			</a>
 		</div>
 	</div>
 	<div class="content content--contact">
