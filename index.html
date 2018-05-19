@@ -249,6 +249,43 @@
 		.awards-list__item__year {
 			color: #a4a4a4;
 		}
+		.videos {
+
+		}
+		.video-item {
+			width: 330px;
+			height: 220px;
+			background-repeat: no-repeat;
+			background-size: 330px 220px;
+			background-position: center;
+			cursor: pointer;
+			transition: all .1s ease-out;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5px;
+    		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+		}
+		.video-item::before {
+			/* "Play" button */
+			content: "";
+			display: block;
+			background-color: #bb2a63;
+			background-image: url(images/play.svg);
+			background-position: center left 28px;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+			width: 70px;
+			height: 70px;
+			background-size: 23%;
+		}
+		.video-item:hover {
+			background-size: 363px 242px;
+			box-shadow: 0 5px 20px 0 rgba(0,0,0,0.5);
+		}
+		.video-item--popper {
+			background-image: url(images/video-thumb--popper.jpg);
+		}
 	</style>
 </head>
 <body>
@@ -294,6 +331,11 @@
 	</div>
 	<div class="content content--video">
 		<h1 class="content__title">Video</h1>
+		<div class="videos">
+			<div class="video-item video-item--popper">
+				
+			</div>
+		</div>
 	</div>
 	<div class="content content--contact">
 		<h1 class="content__title">Contact</h1>
