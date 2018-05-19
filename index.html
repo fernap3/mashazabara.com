@@ -47,6 +47,7 @@
 			top: 0;
 			left: 0;
 			right: 0;
+			z-index: 10;
 		}
 		.external-link span {
 			vertical-align: middle;
@@ -97,7 +98,7 @@
 			transform-origin: top left;
 			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 			top: 0;
-			z-index: 1;
+			z-index: 10;
 		}
 		.page-title--docked {
 			transform: translate(10px, 0);
@@ -105,7 +106,6 @@
 		}
 		.page-title--small {
 			transform: translate(10px, 10px) scale(0.2);
-			cursor: pointer;
 			-webkit-user-select: none;
 			-ms-user-select: none;
 			-moz-user-select: none;
@@ -117,6 +117,9 @@
 			animation-name: firstname-in;
 			animation-duration: 1s;
 			animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		}
+		.page-title--small .page-title--firstname {
+			cursor: pointer;			
 		}
 		.page-title--firstname::after {
 			content: "𝄢";
@@ -131,6 +134,7 @@
 			animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 			animation-fill-mode: backwards;
 			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+			cursor: default;
 		}
 		.page-title--small .page-title--firstname::after {
 			opacity: 0;
@@ -149,6 +153,7 @@
 		}
 		.page-title--small .page-title--lastname {
 			opacity: 0;
+			pointer-events: none;
 		}
 		.page-title--description {
 			color: white;
