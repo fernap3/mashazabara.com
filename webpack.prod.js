@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require("fs");
 
 const distId = guid();
-const publicPath = `https://i.fizzrimg.com/${distId}/`;
+const publicPath = `https://di5gge6vcvthd.cloudfront.net/${distId}/`;
 
 module.exports = merge(common, {
 	devtool: "none",
