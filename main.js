@@ -1,5 +1,15 @@
 require("./main.css");
 require("./images/masha-shoulder.jpg");
+require("./favicon/apple-touch-icon-57x57.png");
+require("./favicon/apple-touch-icon-72x72.png");
+require("./favicon/apple-touch-icon-114x114.png");
+require("./favicon/apple-touch-icon-120x120.png");
+require("./favicon/apple-touch-icon-144x144.png");
+require("./favicon/apple-touch-icon-152x152.png");
+require("./favicon/favicon.ico");
+require("./favicon/favicon-16x16.png");
+require("./favicon/favicon-32x32.png");
+require("./favicon/mstile-144x144.png");
 
 const onPageScroll = () => {
 	const title = document.querySelector(".page-title");

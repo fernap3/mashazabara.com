@@ -42,6 +42,17 @@ module.exports = {
 						}
 					}
 				]
+			},
+			{
+				test: /favicon/,
+				use: [
+					{
+						loader: "file-loader",
+						options: {
+							name: "favicon/[name].[ext]"
+						}
+					}
+				]
 			}
 		]
 	},
