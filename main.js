@@ -1,4 +1,5 @@
-require("./main.css")
+require("./main.css");
+require("./images/masha-shoulder.jpg");
 
 window.onscroll = (evt) => {
 	const title = document.querySelector(".page-title");
