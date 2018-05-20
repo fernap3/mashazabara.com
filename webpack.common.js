@@ -54,12 +54,6 @@ module.exports = {
 		path: path.resolve(__dirname, "./dist/")
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: "./index.html",
-			inject: "body",
-			filename: "index.html",
-			chunks: ["site"]
-		}),
 		new ExtractTextPlugin({
 			filename: "styles.css"
 		}),
