@@ -1,0 +1,22 @@
+{
+  "name": "mashazabara.com",
+  "version": "1.0.0",
+  "description": "The website of Masha Zabara",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernap3/mashazabara.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernap3/mashazabara.com/issues"
+  },
+  "homepage": "https://github.com/fernap3/mashazabara.com#readme",
+  "dependencies": {
+    "webpack": "^4.8.3"
+  }
+}
