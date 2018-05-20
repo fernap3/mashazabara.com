@@ -23,6 +23,21 @@ module.exports = merge(common, {
 			publicPath: publicPath
 		}),
 		new S3Plugin({
+			include: /index\.html$/,
+			s3Options: {
+				accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+				secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+			},
+			s3UploadOptions: {
+				Bucket: 'mashazabara.com',
+				CacheControl: "max-age=31556926",
+				ContentLength(fileName) {
+					const stats = fs.statSync(path.join("dist", fileName));
+					return stats["size"] + "";
+				}
+			}
+		}),
+		new S3Plugin({
 			//exclude: /.*\.html$/,
 			//include: /.*\.html$/,
 			s3Options: {
