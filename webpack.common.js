@@ -22,7 +22,7 @@ module.exports = {
 				})
 			},
 			{
-				test: /\.(png|svg|jpg|gif)$/,
+				test: /\.(png|svg|jpg|gif|woff|woff2)$/,
 				use: [
 					{
 						loader: "file-loader",
@@ -39,7 +39,7 @@ module.exports = {
 	},
 	output: {
 		filename: "bundle.js",
-		publicPath: "/static/",
+		//publicPath: "/static/",
 		path: path.resolve(__dirname, "./dist/")
 	},
 	plugins: [

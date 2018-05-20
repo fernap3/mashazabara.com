@@ -1,3 +1,5 @@
+require("./main.css")
+
 window.onscroll = (evt) => {
 	const title = document.querySelector(".page-title");
 	const navbar = document.querySelector(".navbar");
