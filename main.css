@@ -115,11 +115,11 @@ a {
 	cursor: pointer;			
 }
 .page-title--firstname::after {
-	content: "𝄢";
+	content: "";
 	color: black;
 	font-size: 200%;
 	position: absolute;
-	top: -30px;
+	top: 11px;
 	right: -100px;
 	text-shadow: none;
 	animation-name: basscleff-in;
@@ -128,6 +128,12 @@ a {
 	animation-fill-mode: backwards;
 	transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 	cursor: default;
+	font-family: sans-serif;
+	height: 87px;
+	width: 72px;
+	background-image: url("images/bass-clef@3x.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 .page-title--small .page-title--firstname::after {
 	opacity: 0;
