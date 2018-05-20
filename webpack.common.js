@@ -22,12 +22,23 @@ module.exports = {
 				})
 			},
 			{
-				test: /\.(png|svg|jpg|gif|woff|woff2)$/,
+				test: /\.(png|svg|jpg|gif)$/,
 				use: [
 					{
 						loader: "file-loader",
 						options: {
 							name: "images/[name].[ext]"
+						}
+					}
+				]
+			},
+			{
+				test: /\.(woff|woff2)$/,
+				use: [
+					{
+						loader: "file-loader",
+						options: {
+							name: "fonts/[name].[ext]"
 						}
 					}
 				]
