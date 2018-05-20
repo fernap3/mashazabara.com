@@ -21,10 +21,9 @@ window.onscroll = (evt) => {
 		navbar.classList.add("navbar--hidden");
 }
 
+const isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 const firstName = document.querySelector(".page-title--firstname");
 firstName.onclick = evt => {
-	const isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
-
 	if (isSmoothScrollSupported)
 		window.scrollTo({
 			"behavior": "smooth",
@@ -33,4 +32,33 @@ firstName.onclick = evt => {
 		});
 	else
 		window.scrollTo(0, 0);
+};
+
+const navbarHeight = 36;
+const watchButton = document.querySelector(".home-button--watch");
+watchButton.onclick = evt => {
+	const videoContent = document.querySelector(".content--video");
+	const top = videoContent.getBoundingClientRect().top - navbarHeight;
+	if (isSmoothScrollSupported)
+		window.scrollTo({
+			"behavior": "smooth",
+			"left": 0,
+			"top": top
+		});
+	else
+		window.scrollTo(0, top);
+};
+
+const bookButton = document.querySelector(".home-button--book");
+bookButton.onclick = evt => {
+	const contactContent = document.querySelector(".content--contact");
+	const top = contactContent.getBoundingClientRect().top - navbarHeight;
+	if (isSmoothScrollSupported)
+		window.scrollTo({
+			"behavior": "smooth",
+			"left": 0,
+			"top": top
+		});
+	else
+		window.scrollTo(0, top);
 };

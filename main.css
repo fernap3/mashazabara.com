@@ -316,16 +316,48 @@ a {
 }
 .home-buttons {
 	position: absolute;
-	top: calc(100vh - 50px);
-	left: calc(50% - 75px);
+	top: calc(100vh - 80px);
+	left: calc(50% - 120px);
 	height: 50px;
-	width: 150px;
+	width: 240px;
+	white-space: nowrap;
 }
 .home-button {
-	background: transparent;
 	border: 0;
-	border-radius: 3px;
 	font-family: Roboto;
+	font-weight: 700;
 	font-size: 18px;
+	color: #464646;
+	background-color: #fff;
+	height: 50px;
+	width: 140px;
+	border-radius: 50px;
+	background-size: 28px;
+	background-position: top 13px left 20px;
+	background-repeat: no-repeat;
+	padding-left: 37px;
+	outline: none;
+	cursor: pointer;
+	transition: all .1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.home-button--ghost {
+	background-color: transparent;
 	color: white;
+	font-weight: 200;
+	border: 1px solid transparent;
+	background-size: 18px;
+	background-position: top 14px left 30px;
+	opacity: .8;
+}
+.home-button--ghost:hover {
+	background-image: url(images/watch.svg);
+	opacity: .9;
+}
+.home-button--book {
+	background-image: url(images/message.svg);
+	box-shadow: 2px 2px 0px 0px #bb2a63;
+}
+.home-button--book:hover {
+	transform: translate(-2px, -2px);
+	box-shadow: 6px 6px 0px 0px #bb2a63;
 }
