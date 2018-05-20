@@ -1,7 +1,7 @@
 require("./main.css");
 require("./images/masha-shoulder.jpg");
 
-window.onscroll = (evt) => {
+const onPageScroll = () => {
 	const title = document.querySelector(".page-title");
 	const navbar = document.querySelector(".navbar");
 
@@ -19,7 +19,9 @@ window.onscroll = (evt) => {
 		navbar.classList.remove("navbar--hidden");
 	else
 		navbar.classList.add("navbar--hidden");
-}
+};
+
+window.onscroll = onPageScroll;
 
 const isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
 const firstName = document.querySelector(".page-title--firstname");
