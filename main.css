@@ -38,7 +38,8 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
-input {
+input,
+textarea {
 	color: inherit;
 }
 .navbar {
@@ -493,7 +494,6 @@ input {
 	max-width: 550px;
 	font-family: Roboto;
 	font-size: 1em;
-	color: #e2e2e2;
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #e2e2e2;

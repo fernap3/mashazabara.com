@@ -125,7 +125,8 @@ async function submitContactForm()
 		body: JSON.stringify({
 			email: email,
 			name: name,
-			message: message
+			message: message,
+			source: "mashazabara.com"
 		})
 	}));
 
