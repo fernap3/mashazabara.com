@@ -220,7 +220,7 @@ textarea {
 .description-line:nth-child(3) { animation-delay: .6s; }
 .bio {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: auto;
 	grid-column-gap: 50px;
 	font-size: 16px;
 	line-height: 30px;
@@ -229,15 +229,28 @@ textarea {
 	margin-top: 0;
 }
 .bio__p--first {
-	grid-column: 1;
 }
 .bio__p--second {
-	grid-column: 2;
 }
 .bio__p--endorsement {
 	font-weight: bold;
-	grid-column: 2;
 }
+
+@media screen and (min-width: 600px) {
+	.bio {
+		grid-template-columns: 1fr 1fr;
+	}
+	.bio__p--first {
+		grid-column: 1;
+	}
+	.bio__p--second {
+		grid-column: 2;
+	}
+	.bio__p--endorsement {
+		grid-column: 2;
+	}
+}
+
 .content--npr {
 	height: 600px;
 	display: grid;
@@ -287,6 +300,7 @@ textarea {
 }
 .awards-list {
 	list-style: none;
+	padding: 0;
 }
 .awards-list__item {
 	font-size: 19px;
