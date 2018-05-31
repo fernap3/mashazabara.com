@@ -94,6 +94,14 @@ textarea {
 	align-items: flex-start;
 	padding: 0;
 }
+
+@media screen and (max-width: 800px) {
+	.content--home {
+		background-size: auto 100vh;
+    	background-position: right -320px center;
+	}
+}
+
 .content--bio {
 	padding: 60px 90px;
 }
