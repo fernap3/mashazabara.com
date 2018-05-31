@@ -78,6 +78,30 @@
 	</div>
 	<div class="content content--contact">
 		<h1 class="content__title">Contact</h1>
+		<div class="material-input">
+			<input type="text" id="contact-name" class="contact-input" spellcheck="false" required="required">
+			<label class="contact-name-label">Name</label>
+			<div class="material-input-error">Please enter your name</div>
+		</div>
+		<div class="material-input">
+			<input type="email" id="contact-email" class="contact-input" spellcheck="false" required="required">
+			<label class="contact-email-label">Email</label>
+			<div class="material-input-error">Please enter your email address</div>
+		</div>
+		<div class="material-input">
+			<textarea id="contact-message" class="contact-textarea" required="required"></textarea>
+			<label class="contact-name-label">Message</label>
+			<div class="material-input-error">Please add a message</div>
+		</div>
+		<button type="button" id="contact-submit" class="material-button">
+			<span>Send Message</span>
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+		</button>
+		<div class="form-submit-error">There was an error submitting the form, please reach out to <a href="mailto:supersonicandtails@gmail.com">the site administrator</a> directly.</div>
 	</div>
 </body>
 </html>

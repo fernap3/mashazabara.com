@@ -74,3 +74,73 @@ bookButton.onclick = evt => {
 	else
 		window.scrollTo(0, top);
 };
+
+const nameInput = document.getElementById("contact-name");
+nameInput.onblur = e => {
+	nameInput.value = nameInput.value.trim();
+	nameInput.classList.toggle("nonempty", nameInput.value !== "");
+};
+
+const emailInput = document.getElementById("contact-email");
+emailInput.onblur = e => {
+	emailInput.value = emailInput.value.trim();
+	emailInput.classList.toggle("nonempty", emailInput.value !== "");
+};
+
+const messageInput = document.getElementById("contact-message");
+messageInput.onblur = e => {
+	messageInput.value = messageInput.value.trim();
+	messageInput.classList.toggle("nonempty", messageInput.value !== "");
+};
+
+const contactSubmit = document.getElementById("contact-submit");
+contactSubmit.onclick = e => submitContactForm();
+
+async function submitContactForm()
+{
+	const contactPane = document.querySelector(".content--contact");
+	contactPane.classList.add("validate");
+
+	if (!emailInput.checkValidity() ||
+		!nameInput.checkValidity() ||
+		!messageInput.checkValidity())
+	{
+		return;
+	}
+
+	const email = emailInput.value;
+	const name = nameInput.value;
+	const message = messageInput.value;
+
+	const headers = new Headers();
+	headers.append("Content-Type", "application/json");
+
+	contactSubmit.disabled = true;
+
+	const response = (await fetch("https://jf61olseya.execute-api.us-east-1.amazonaws.com/Production/contact",
+	{
+		method: "POST",
+		headers: headers,
+		mode: "cors",
+		body: JSON.stringify({
+			email: email,
+			name: name,
+			message: message
+		})
+	}));
+
+	contactSubmit.disabled = false;
+
+	if (response.status < 200 || response.status > 299)
+	{
+		const errorMsg = document.querySelector(".form-submit-error");
+		errorMsg.classList.add("visible");
+	}
+	else
+	{
+		contactSubmit.classList.add("complete");
+		setTimeout(() => {
+			contactSubmit.classList.remove("complete");
+		}, 3000);
+	}
+}
