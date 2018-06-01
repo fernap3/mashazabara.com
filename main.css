@@ -311,6 +311,7 @@ textarea {
 	cursor: pointer;
 	position: relative;
 	transition: color .3s ease-out;
+	perspective: 800px;
 }
 .awards-list__item__year {
 	color: #a4a4a4;
@@ -641,7 +642,7 @@ textarea {
 }
 
 @keyframes scale-up-horiz {
-	from { transform: scaleX(0); }
+	from { transform: translateZ(-10000px); opacity: 0; }
 	to { transform: none; opacity: 1; }
 }
 
@@ -651,11 +652,12 @@ textarea {
 	width: 100%;
 	position: absolute;
 	left: 0;
-	/* transform-origin: left center; */
+	transform-origin: left center;
 	animation-duration: .3s;
 	animation-fill-mode: forwards;
 	z-index: -1;
-	transform: scaleX(0);
+	transform: translateZ(-10000px);
+	opacity: 0;
 }
 .awards-list__item__bar--1 {
 	top: 0;

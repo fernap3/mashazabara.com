@@ -145,3 +145,14 @@ async function submitContactForm()
 		}, 3000);
 	}
 }
+
+const awardItems = document.querySelectorAll(".awards-list__item");
+
+awardItems.forEach(item => {
+	for (let i = 0; i < 5; i++)
+	{
+		const bar = document.createElement("div");
+		bar.className = `awards-list__item__bar awards-list__item__bar--${i+1}`;
+		item.appendChild(bar);
+	}
+});
