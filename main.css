@@ -305,12 +305,16 @@ textarea {
 	padding: 0;
 }
 .awards-list__item {
-	font-size: 19px;
+	font-size: 16px;
 	padding: 22px;
 	border-bottom: 1px solid rgba(0,0,0,.14);
+	cursor: pointer;
+	position: relative;
+	transition: color .3s ease-out;
 }
 .awards-list__item__year {
 	color: #a4a4a4;
+	transition: color .3s ease-out;
 }
 .videos {
 	display: grid;
@@ -634,4 +638,51 @@ textarea {
 .form-submit-error.visible {
 	opacity: 1;
 	pointer-events: all;
+}
+
+@keyframes scale-up-horiz {
+	from { transform: scaleX(0); }
+	to { transform: none; opacity: 1; }
+}
+
+.awards-list__item__bar {
+	background: #bb2a63;
+	height: 20%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	/* transform-origin: left center; */
+	animation-duration: .3s;
+	animation-fill-mode: forwards;
+	z-index: -1;
+	transform: scaleX(0);
+}
+.awards-list__item__bar--1 {
+	top: 0;
+	animation-delay: 0;
+}
+.awards-list__item__bar--2 {
+	top: 20%;
+	animation-delay: .05s;
+}
+.awards-list__item__bar--3 {
+	top: 40%;
+	animation-delay: .1s;
+}
+.awards-list__item__bar--4 {
+	top: 60%;
+	animation-delay: .15s;
+}
+.awards-list__item__bar--5 {
+	top: 80%;
+	animation-delay: .2s;
+}
+.awards-list__item:hover {
+	color: white;
+}
+.awards-list__item__year:hover {
+	color: white;
+}
+.awards-list__item:hover .awards-list__item__bar {
+	animation-name: scale-up-horiz;
 }
