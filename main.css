@@ -233,28 +233,22 @@ textarea {
 	font-size: 16px;
 	line-height: 30px;
 }
-.bio__p {
+.bio__column {
 	margin-top: 0;
 }
-.bio__p--first {
-}
-.bio__p--second {
-}
-.bio__p--endorsement {
+.bio__column__p--endorsement {
 	font-weight: bold;
 }
 
 @media screen and (min-width: 600px) {
 	.bio {
 		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: column;
 	}
-	.bio__p--first {
+	.bio__column--first {
 		grid-column: 1;
 	}
-	.bio__p--second {
-		grid-column: 2;
-	}
-	.bio__p--endorsement {
+	.bio__column--second {
 		grid-column: 2;
 	}
 }
