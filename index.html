@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<title>Masha Zabara - Cellist, Performer, Creator</title>
+    <meta name="Description" content="Award-winning cellist, combining classical and pop music with electronic looping">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<%= htmlWebpackPlugin.options.publicPath %>favicon/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= htmlWebpackPlugin.options.publicPath %>favicon/apple-touch-icon-114x114.png" />
@@ -36,11 +37,17 @@
 	<div class="content content--bio">
 		<h1 class="content__title">Biography</h1>
 		<div class="bio">
-			<p class="bio__p bio__p--first">Originally from Belarus, Masha is an award-winning cellist who has played individually, with groups of musicians and multiple orchestras throughout Europe and the United States. A second generation musician; she is currently a principal cellist with the Conservatory at Bard College in Annandale, New York, a short distance from Manhattan and Boston.</p>
-			<p class="bio__p bio__p--second">Her passionate playing, imbued with the romance of Eastern Europe is intensified by the use of a loop pedal to create a thoroughly modern sound. An experienced performer with an extensive repetoire, Masha mesmerizes with a unique interpretation of pop, jazz and classical works.</p>
-			<p class="bio__p bio__p--endorsement">Masha Zabara plays an O.Glásel violoncello, 1917, generously provided by Carlsen Cello Foundation.</p>
+			<div class="bio__column bio__column--first">
+				<p class="bio__column__p">Originally from Belarus, at twenty years old Masha is an award-winning cellist who has played individually, with groups of musicians and multiple orchestras throughout Europe and the United States. Masha started her performing career at the "Stagorsky Music Festival," followed by collaborating with Minsk Philharmonic Orchestra for three solo performances in the consecutive years.</p>
+				<p class="bio__column__p">From the Republican Music College (Minsk, Class of I. Stepanova) and the Tchaikovsky Music Academy (Moscow, Class of O. Galochkina), Masha has been invited to study in the United States with Tanya Remenikova, an internationally renowned cellist and professor at the University of Minnesota. In three years, she has performed in five states, played with Minnesota Sinfonia Orchestra, and became a laureate of nine competitions.</p>
+			</div>
+			<div class="bio__column bio__column--second">
+				<p class="bio__column__p">Masha’s performance at Jordan Hall (Boston, MA) and interview have been featured on the NPR’s From The Top in 2016, followed by a concert in collaboration with Christopher O’Riley in NYC.</p>
+				<p class="bio__column__p">Most recently, Masha has developed a unique practice combining classical cello and electronic loop pedal, which allows for an array of different music styles and improvisation. One of the very few classical artists familiar with the technique, she works on scoring films and recording her own compositions. A second generation musician, Masha is currently a principal cellist with the Conservatory at Bard College in Annandale, New York.</p>
+				<p class="bio__column__p bio__column__p--endorsement">Masha Zabara plays an O.Glásel violoncello, 1917, generously provided by Carlsen Cello Foundation and Diamond CodaBow, awarded by the Mary West Solo Competition.</p>
+			</div>
 		</div>
-	</div>
+	</div> 
 	<div class="content content--npr">
 		<p class="npr-quote">&ldquo;So playful, so<br>evocative. Projecting performance!&rdquo; &ndash; NPR</p>
 		<p class="npr-link"><a class="external-link" target="_blank" href="https://www.fromthetop.org/musician/mariya-zabara/"><span>Show 318, Boston, MA &ndash; Mariya Zabara, cello</span></a></p>
@@ -80,36 +87,30 @@
 	</div>
 	<div class="content content--contact">
 		<h1 class="content__title">Contact</h1>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
-		<p>blah</p>
+		<div class="material-input">
+			<input type="text" id="contact-name" class="contact-input" spellcheck="false" required="required">
+			<label class="contact-name-label">Name</label>
+			<div class="material-input-error">Please enter your name</div>
+		</div>
+		<div class="material-input">
+			<input type="email" id="contact-email" class="contact-input" spellcheck="false" required="required">
+			<label class="contact-email-label">Email</label>
+			<div class="material-input-error">Please enter your email address</div>
+		</div>
+		<div class="material-input">
+			<textarea id="contact-message" class="contact-textarea" required="required"></textarea>
+			<label class="contact-name-label">Message</label>
+			<div class="material-input-error">Please add a message</div>
+		</div>
+		<button type="button" id="contact-submit" class="material-button">
+			<span>Send Message</span>
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+		</button>
+		<div class="form-submit-error">There was an error submitting the form, please reach out to <a href="mailto:supersonicandtails@gmail.com">the site administrator</a> directly.</div>
 	</div>
 </body>
 </html>
